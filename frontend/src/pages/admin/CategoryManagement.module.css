@@ -1,0 +1,91 @@
+.container {
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.addForm {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.addForm input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.addForm button {
+  padding: 12px 25px;
+  background: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.item {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #edf2f7;
+}
+
+.item span {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.item button {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item button:hover {
+  background: #e53e3e;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .addForm {
+    flex-direction: column;
+  }
+
+  .addForm input,
+  .addForm button {
+    width: 100%;
+    box-sizing: border-box; /* Padding dahil olsun */
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

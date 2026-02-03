@@ -1,0 +1,45 @@
+.pageContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  color: var(--koyu-mavi);
+  margin-bottom: 1.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Sol 300px, sağ kalan boşluk */
+  gap: 2rem;
+}
+
+.filterColumn {
+  /* Sol sütun (FilterSidebar) */
+  position: sticky;
+  top: 2rem; /* Sayfayı kaydırırken filtre menüsü üstte kalsın */
+  align-self: start; /* Yapışkan konumlandırmanın düzgün çalışması için */
+}
+
+/* ========================================= */
+/* == RESPONSIVE TASARIM (MOBİL UYUMLULUK) == */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+    gap: 1.5rem;
+  }
+
+  .filterColumn {
+    position: static; /* Mobilde yapışkan olmasın, akışa uysun */
+    width: 100%;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,88 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card span {
+  color: #718096;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card h3 {
+  margin: 5px 0 0 0;
+  font-size: 1.6rem;
+  color: #2d3748;
+}
+
+.iconBlue {
+  color: #3182ce;
+  font-size: 2.5rem;
+}
+.iconGreen {
+  color: #38a169;
+  font-size: 2.5rem;
+}
+.iconPurple {
+  color: #805ad5;
+  font-size: 2.5rem;
+}
+
+.chartsRow {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.chartBox,
+.infoBox {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.chartBox h3,
+.infoBox h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #4a5568;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.progressCircle {
+  width: 140px;
+  height: 140px;
+  border: 12px solid #edf2f7;
+  border-top-color: #3182ce; /* Doluluk rengi mavi */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.progressCircle strong {
+  font-size: 1.8rem;
+  color: #2d3748;
+}

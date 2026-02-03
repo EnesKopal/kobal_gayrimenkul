@@ -1,0 +1,255 @@
+.container {
+  padding: 20px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.sidebarHeader {
+  padding: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  color: #003366;
+}
+
+.propertyList {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.propertyCard {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f8fafc;
+  transition: 0.2s;
+}
+
+.propertyCard:hover {
+  background-color: #f1f5f9;
+}
+
+.activeCard {
+  background-color: #ebf5ff !important;
+  border-left: 4px solid #003366;
+}
+
+.propertyCard strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.propertyCard span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Content Area */
+.content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.statsRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.statBox {
+  flex: 1;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.statBox span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+.statBox strong {
+  font-size: 1.4rem;
+}
+
+.orange {
+  color: #f59e0b;
+}
+.green {
+  color: #10b981;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.85rem;
+}
+
+.table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+/* Badge Styles */
+.statusBadge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.paid {
+  background: #f0fff4;
+  color: #38a169;
+}
+.waiting_approval {
+  background: #fffaf0;
+  color: #b7791f;
+}
+.pending {
+  background: #f7fafc;
+  color: #4a5568;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.viewBtn,
+.approveBtn {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.2s;
+}
+
+.viewBtn {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  padding: 8px;
+}
+
+.approveBtn {
+  background: #38a169;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 500;
+}
+
+.approveBtn:hover {
+  background: #2f855a;
+}
+
+.rejectBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .dashboardLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .statsRow {
+    flex-direction: column;
+  }
+
+  /* Tablo Kart Görünümü */
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .actions button {
+    justify-content: center;
+    width: 100%;
+  }
+}

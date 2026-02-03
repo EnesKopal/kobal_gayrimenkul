@@ -1,0 +1,55 @@
+/* ============================================== */
+/* == 1. RENK PALETİ (CSS DEĞİŞKENLERİ) == */
+/* ============================================== */
+:root {
+  --koyu-mavi: #0053a0;  /* Ana Başlık, Nav, Footer, Birincil Buton */
+  --acik-mavi: #00aef0;  /* Vurgu, Linkler, İkonlar */
+  --beyaz: #FFFFFF;     /* Ana Arka Plan */
+  --koyu-gri: #333333;   /* Ana Metin (Paragraflar) */
+  --acik-gri: #F5F5F5;   /* İkincil Arka Planlar, Bölüm Ayırıcılar */
+
+  /* Diğer (Nötr) Renkler */
+  --border-rengi: #e0e0e0; /* Açık Gri'den biraz daha belirgin bir sınır */
+  --golge: rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================== */
+/* == 2. TEMEL (GLOBAL) STİLLER == */
+/* ============================================== */
+
+/* En iyi pratik: Tüm elemanların kutu modelini düzeltir */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--beyaz); /* Ana Arka Plan */
+  color: var(--koyu-gri);         /* Varsayılan metin rengi */
+}
+
+/* Global Link Stilleri (react-router-dom <Link> dahil) */
+a {
+  color: var(--acik-mavi); /* Varsayılan link rengi */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+
+/* ============================================== */
+/* == 3. GLOBAL UYGULAMA YERLEŞİMİ (App.jsx) == */
+/* ============================================== */
+
+/* Bu sınıflar App.jsx'te (en üst bileşende) kullanıldığı için 
+  global CSS dosyasında kalmaları mantıklıdır. 
+*/
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Footer'ı her zaman sayfanın en altına itmek için */
+}

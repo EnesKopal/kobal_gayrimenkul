@@ -1,0 +1,22 @@
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--koyu-mavi);
+  color: var(--beyaz);
+  margin-top: 2rem;
+}
+.footer a {
+  color: var(--beyaz);
+}
+.footer a:hover {
+  color: var(--beyaz);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+}

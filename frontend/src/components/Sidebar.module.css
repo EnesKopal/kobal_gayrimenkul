@@ -1,0 +1,94 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: var(--koyu-mavi);
+  color: var(--beyaz);
+  padding: 1.5rem;
+  z-index: 1000;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--beyaz);
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.closeButton:hover {
+  opacity: 1;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navList li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 0.5rem;
+  color: var(--beyaz);
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.navList li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--beyaz);
+}
+.navList li a svg {
+  font-size: 1.2rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0;
+}
+
+.sidebarLogoutBtn {
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  padding: 0.8rem;
+  color: #ffcccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.2s;
+}
+
+.sidebarLogoutBtn:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: white;
+}

@@ -1,0 +1,255 @@
+.container {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: "Poppins", sans-serif;
+  --main-radius: 12px;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--koyu-mavi);
+  text-decoration: underline;
+}
+
+.separatorIcon {
+  font-size: 0.7rem;
+  color: #ccc;
+}
+
+.currentPath {
+  color: #444;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: var(--koyu-mavi);
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topSection {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: stretch; /* Eşit yükseklik için */
+}
+
+.leftCol {
+  flex: 0 0 calc(65% - 1rem); /* Görsel alanı genişletildi */
+  min-width: 0;
+}
+
+.rightCol {
+  flex: 0 0 calc(35% - 1rem); /* Bilgi kartı daraltıldı */
+  min-width: 0;
+}
+
+.galleryWrapper {
+  height: 100%;
+  min-height: 600px; /* Minimum bir yükseklik belirledik */
+  border-radius: var(--main-radius);
+  overflow: hidden;
+}
+
+.priceCard {
+  background: var(--koyu-mavi);
+  color: #fff;
+  border-radius: var(--main-radius);
+  height: 100%; /* Yandaki kolonla eşit olması için */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.topInfo {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  text-align: center;
+}
+
+.priceTag {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.statusBadge {
+  background: var(--acik-mavi);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.specs {
+  padding: 1rem 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specs::-webkit-scrollbar {
+  width: 5px;
+}
+
+.specs::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.specItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Uzun metinlerde ortalamak yerine üstten hizalasın */
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 0.85rem;
+  gap: 15px; /* Label ve value birbirine yapışmasın */
+}
+
+.specItem strong {
+  text-align: right;
+  flex: 1; /* Kalan boşluğu doldursun */
+  word-break: break-word; /* Çok uzun kelimeleri kırsın */
+}
+
+.specItem span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.listingNo {
+  color: greenyellow;
+}
+
+.agentSection {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.agentName {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contactBtn,
+.emailBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.contactBtn {
+  background: #28a745;
+  color: white;
+}
+
+.contactBtn:hover {
+  background: #218838;
+}
+
+.emailBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.emailBtn:hover {
+  background: #fff;
+  color: var(--koyu-mavi);
+}
+
+.descriptionCard {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: var(--main-radius);
+}
+
+.descriptionCard h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: var(--koyu-mavi);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.descriptionBody {
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-line;
+}
+
+@media (max-width: 992px) {
+  .topSection {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 1.5rem;
+    color: var(--koyu-mavi);
+    margin-bottom: 0.5rem;
+  }
+
+  .leftCol,
+  .rightCol {
+    width: 100%;
+    flex: auto;
+  }
+  .galleryWrapper,
+  .priceCard {
+    height: auto;
+    min-height: auto;
+  }
+  .galleryWrapper {
+    height: 350px; /* Mobilde sabit yükseklik */
+  }
+  .priceCard {
+    max-height: none;
+  }
+}

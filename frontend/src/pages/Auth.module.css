@@ -1,0 +1,79 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+}
+
+.authForm {
+  background: var(--acik-gri);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+}
+
+.authForm h2 {
+  color: var(--koyu-mavi);
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.authForm input,
+.authForm select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--koyu-mavi);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #1557b0;
+}
+label {
+  color: var(--koyu-mavi);
+}
+.error {
+  color: #d93025;
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.switchAuth {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.switchAuth a {
+  color: var(--koyu-mavi);
+  text-decoration: none;
+  font-weight: 600;
+}

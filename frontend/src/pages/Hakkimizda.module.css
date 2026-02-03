@@ -1,0 +1,74 @@
+.pageContainer {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--beyaz);
+  border: 1px solid var(--border-rengi);
+  border-radius: 8px;
+  text-align: center;
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  color: var(--koyu-mavi);
+  border-bottom: 3px solid var(--acik-gri);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.pageLogo {
+  width: 150px;
+  height: auto;
+  display: block; 
+  margin: 0 auto 2rem auto; 
+}
+
+.loadingContainer {
+  text-align: center;
+  padding: 5rem;
+  font-size: 1.5rem;
+  color: var(--koyu-gri);
+}
+
+ent h2 {
+  font-size: 1.8rem;
+  color: var(--koyu-mavi);
+  margin-top: 2rem;
+}
+.content h2 {
+  font-size: 1.8rem;
+  color: var(--koyu-mavi);
+  margin-top: 2rem;
+  text-align: center; 
+}
+.content h3 {
+  font-size: 1.4rem;
+  color: var(--koyu-gri);
+  margin-top: 1.5rem;
+}
+.content p, 
+.content li {
+  font-size: 1.1rem;
+  line-height: 1.7; 
+  color: var(--koyu-gri);
+  text-align: left; 
+}
+.content ul {
+  padding-left: 2rem;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

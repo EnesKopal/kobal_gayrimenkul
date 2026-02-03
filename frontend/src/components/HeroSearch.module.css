@@ -1,0 +1,143 @@
+.container {
+  background-color: #f5f5f5;
+  background-image: url("../assets/sehir2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 500px;
+}
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+}
+.typeButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+}
+.typeBtn {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid transparent;
+  background-color: var(--beyaz);
+  color: var(--koyu-mavi);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+  margin: 0 2px;
+  transition: background-color 0.2s;
+}
+.typeBtn:hover {
+  background-color: var(--acik-mavi);
+}
+.active {
+  background-color: var(--koyu-mavi);
+  color: var(--beyaz);
+  font-weight: bold;
+  border-color: var(--border-rengi);
+  border-bottom-color: var(--beyaz);
+  z-index: 10;
+}
+.searchBox {
+  background: var(--beyaz);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  position: relative;
+}
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+.filterGroup label {
+  font-size: 0.85rem;
+  color: var(--koyu-gri);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  text-align: left;
+}
+.filterGroup select,
+.filterGroup input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-rengi);
+  border-radius: 4px;
+  background-color: var(--beyaz);
+}
+.searchTextGroup {
+  flex-grow: 2;
+}
+.submitBtn {
+  background-color: var(--koyu-mavi);
+  color: var(--beyaz);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  height: calc(0.75rem * 2 + 1rem + 2px);
+}
+.submitBtn:hover {
+  background-color: #003d7a;
+}
+
+/* ========================================= */
+/* == RESPONSIVE TASARIM (MOBİL UYUMLULUK) == */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .container {
+    height: auto; /* Sabit 500px yerine otomatik yükseklik */
+    min-height: 400px;
+    padding: 2rem 1rem;
+    align-items: flex-start; /* Üstten başlasın */
+  }
+
+  /* Kategori butonları ekrana sığmazsa kaydırılabilir olsun veya küçülsün */
+  .typeButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  .typeBtn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    flex: 1 0 auto; /* Esnek genişlik */
+    border-radius: 4px;
+    margin: 0;
+  }
+
+  .searchBox {
+    flex-direction: column; /* Yan yana değil alt alta */
+    align-items: stretch;
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .filterGroup {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .submitBtn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}

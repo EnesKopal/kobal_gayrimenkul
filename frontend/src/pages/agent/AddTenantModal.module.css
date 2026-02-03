@@ -1,0 +1,69 @@
+.overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 450px;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modalHeader h2 { margin: 0; color: #333; font-size: 1.3rem; }
+
+.closeBtn { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #888; }
+
+.field { margin-bottom: 1.2rem; }
+
+.field label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; color: #555; }
+
+.field input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--koyu-mavi); /* Sidebar ile uyumlu renk */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.fileArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #777;
+}

@@ -1,0 +1,289 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.headerSection {
+  margin-bottom: 2.5rem;
+}
+
+.headerSection h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.headerSection p {
+  color: #7f8c8d;
+}
+
+.propertyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.propertyCard {
+  background: white;
+  border: 2px solid #edf2f7;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.propertyCard:hover {
+  border-color: #3498db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.activeCard {
+  border-color: #3498db;
+  background-color: #f0f9ff;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  background: #3498db;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.cardInfo h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.cardInfo span {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.arrow {
+  margin-left: auto;
+  color: #cbd5e0;
+}
+
+.detailSection {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+}
+
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.summaryBadge {
+  background: #2d3748;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.summaryBadge strong {
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  color: #63b3ed;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table td {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.paidBadge {
+  background: #f0fff4;
+  color: #276749;
+}
+.waitingBadge {
+  background: #fffaf0;
+  color: #9c4221;
+}
+.delayedBadge {
+  background: #fff5f5;
+  color: #9b2c2c;
+}
+.pendingBadge {
+  background: #edf2f7;
+  color: #4a5568;
+}
+.rejectedBadge {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #c53030;
+}
+
+.paidIcon {
+  color: #38a169;
+}
+.waitingIcon {
+  color: #dd6b20;
+}
+.delayedIcon {
+  color: #e53e3e;
+}
+.pendingIcon {
+  color: #718096;
+}
+.rejectedIcon {
+  color: #e53e3e;
+}
+
+.uploadBtn {
+  background: #3182ce;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.uploadBtn:hover {
+  background: #2b6cb0;
+}
+
+.viewLink {
+  color: #3182ce;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.viewLink:hover {
+  text-decoration: underline;
+}
+
+.loader {
+  text-align: center;
+  padding: 5rem;
+  font-size: 1.2rem;
+  color: #718096;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .detailHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .summaryBadge {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Tablo Kart Dönüşümü */
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch; /* Buton tam genişlik olsun */
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    text-align: left;
+  }
+
+  .uploadBtn,
+  .viewLink {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}

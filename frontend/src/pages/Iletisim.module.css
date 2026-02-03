@@ -1,0 +1,163 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Kart Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 380px)); 
+    gap: 30px;
+   
+    justify-content: center; 
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Kart Tasarımı */
+.agentCard {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #f1f5f9;
+}
+
+.agentCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Üst Kısım (Resim Alanı) */
+.imageSection {
+    height: 200px;
+    background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholderImg {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #003366;
+    text-transform: uppercase;
+}
+
+/* Alt Kısım (Bilgi Alanı) */
+.infoSection {
+    padding: 25px;
+}
+
+.infoSection h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #1e293b;
+}
+
+.title {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 5px 0 20px 0;
+}
+
+.contactDetails {
+    margin-bottom: 25px;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.icon {
+    color: #003366;
+}
+
+/* Butonlar */
+.buttonGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.mailBtn, .whatsappBtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.mailBtn {
+    background: #003366;
+    color: white;
+}
+
+.mailBtn:hover {
+    background: #002244;
+}
+
+.whatsappBtn {
+    background: #25d366;
+    color: white;
+}
+
+.whatsappBtn:hover {
+    background: #1ebc5a;
+}
+
+.loader {
+    text-align: center;
+    padding: 100px;
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

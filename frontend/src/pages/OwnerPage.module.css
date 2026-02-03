@@ -1,0 +1,196 @@
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.headerSection {
+  margin-bottom: 30px;
+}
+
+.propertyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.propertyCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.propertyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activeCard {
+  border-color: #3498db;
+  background-color: #f0f7ff;
+}
+
+.cardIcon {
+  font-size: 1.8rem;
+  color: #3498db;
+  background: #ebf5fb;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cardInfo h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.cardInfo span {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+.arrow {
+  margin-left: auto;
+  color: #bdc3c7;
+}
+
+.detailSection {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.incomeStats {
+  background: #eafaf1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #27ae60;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.paidBadge {
+  background: #e6fffa;
+  color: #2c7a7b;
+}
+.waitingBadge {
+  background: #fffaf0;
+  color: #9c4221;
+}
+.delayedBadge {
+  background: #fff5f5;
+  color: #c53030;
+}
+.pendingBadge {
+  background: #f7fafc;
+  color: #4a5568;
+}
+
+.viewLink {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .detailHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .incomeStats {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Tablo Kart Dönüşümü */
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 10px 0;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 0.9rem;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #7f8c8d;
+    text-align: left;
+  }
+}

@@ -1,0 +1,97 @@
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--beyaz);
+
+  box-shadow: 0 4px 8px var(--golge);
+
+  transform: translateY(0);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+.card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s;
+}
+
+.card:hover .button {
+  background-color: var(--beyaz);
+}
+
+.sell {
+  background-color: var(--koyu-mavi);
+  animation-delay: 0.1s;
+}
+.find {
+  background-color: var(--acik-mavi);
+  animation-delay: 0.3s;
+}
+.sell h2,
+.sell p,
+.find h2,
+.find p {
+  color: var(--beyaz);
+}
+
+.find:hover .button {
+  color: var(--acik-mavi);
+}
+.sell:hover .button {
+  color: var(--koyu-mavi);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  .card {
+    min-width: 100%; /* Mobilde tam genişlik */
+    padding: 1.5rem;
+  }
+}
